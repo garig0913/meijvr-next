@@ -1,7 +1,19 @@
 import YouTube from "react-youtube";
 var getYouTubeID = require("get-youtube-id");
+import Slider from "../components/Slider/Slider2";
+import Card from "../components/Card/index";
 
 const Product = (props) => {
+   const cards = [
+      <Card />,
+      <Card />,
+      <Card />,
+      <Card />,
+      <Card />,
+      <Card />,
+      <Card />,
+      <Card />,
+   ];
    const detail = [
       {
          title: "Tooluurin zagvar",
@@ -95,6 +107,8 @@ const Product = (props) => {
                </div>
             </div>
          </div>
+         <Slider comps={cards} length={5} title={"Бүтээгдэхүүн"} />
+
          {/* CSS */}
          <style jsx>{`
             #topMargin {
